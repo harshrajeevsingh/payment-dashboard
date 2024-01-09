@@ -13,7 +13,7 @@ export default function SideNav() {
         />
         <div>
           <h3 className="font-medium text-[0.9375rem]">Nishyan</h3>
-          <a className="text-[0.8125rem] font-normal underline underline-offset-2">
+          <a className="text-[0.8125rem] text-white/80 font-normal underline underline-offset-2">
             Visit Store
           </a>
         </div>
@@ -32,8 +32,8 @@ export default function SideNav() {
         </svg>
       </div>
       {/* NavLinks */}
-      <div className="flex flex-col gap-1 mt-3">
-        <div className="flex gap-3 pl-4 py-2">
+      <ul className="flex flex-col gap-1 mt-3">
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer">
           <svg
             width="20"
             height="20"
@@ -48,9 +48,9 @@ export default function SideNav() {
               />
             </g>
           </svg>
-          <span className="text-sm font-medium text-white/80">Home</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2">
+          <span className="md:text-sm font-medium text-white/80">Home</span>
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer">
           <svg
             width="18"
             height="20"
@@ -84,8 +84,8 @@ export default function SideNav() {
             </g>
           </svg>
           <span className="text-sm font-medium text-white/80">Orders</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2">
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer">
           <svg
             width="18"
             height="18"
@@ -101,8 +101,8 @@ export default function SideNav() {
             </g>
           </svg>
           <span className="text-sm font-medium text-white/80">Products</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2">
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer">
           <svg
             width="20"
             height="16"
@@ -138,8 +138,8 @@ export default function SideNav() {
             </g>
           </svg>
           <span className="text-sm font-medium text-white/80">Delivery</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2">
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer">
           <svg
             width="20"
             height="16"
@@ -169,8 +169,8 @@ export default function SideNav() {
             </g>
           </svg>
           <span className="text-sm font-medium text-white/80">Marketing</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2">
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer">
           <svg
             width="18"
             height="16"
@@ -206,8 +206,8 @@ export default function SideNav() {
             </g>
           </svg>
           <span className="text-sm font-medium text-white/80">Analytics</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2 bg-white/10 rounded">
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer bg-white/10 rounded">
           <svg
             width="20"
             height="20"
@@ -223,8 +223,8 @@ export default function SideNav() {
             />
           </svg>
           <span className="text-sm font-medium text-white">Payments</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2 ">
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer ">
           <svg
             width="18"
             height="18"
@@ -240,8 +240,8 @@ export default function SideNav() {
             </g>
           </svg>
           <span className="text-sm font-medium text-white/80">Tools</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2">
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer">
           <svg
             width="20"
             height="20"
@@ -271,8 +271,8 @@ export default function SideNav() {
             </g>
           </svg>
           <span className="text-sm font-medium text-white/80">Discounts</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2">
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer">
           <svg
             width="20"
             height="16"
@@ -308,8 +308,8 @@ export default function SideNav() {
             </g>
           </svg>
           <span className="text-sm font-medium text-white/80">Audience</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2">
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer">
           <svg
             width="20"
             height="20"
@@ -343,8 +343,8 @@ export default function SideNav() {
             </g>
           </svg>
           <span className="text-sm font-medium text-white/80">Appearnace</span>
-        </div>
-        <div className="flex gap-3 pl-4 py-2">
+        </li>
+        <li className="flex gap-3 pl-4 py-2 cursor-pointer">
           <svg
             width="18"
             height="19"
@@ -362,8 +362,8 @@ export default function SideNav() {
             </g>
           </svg>
           <span className="text-sm font-medium text-white/80">Plugins</span>
-        </div>
-      </div>
+        </li>
+      </ul>
       {/* Wallet */}
       <div className="flex gap-3 py-[9px] pl-3 mx-2 my-2 md:mt-auto mt-10 bg-activeGray h-[54px] rounded">
         <div className="w-9 h-9 px-[6px] py-2 bg-white/10 rounded">
