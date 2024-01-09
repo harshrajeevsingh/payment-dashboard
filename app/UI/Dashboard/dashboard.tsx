@@ -54,8 +54,8 @@ export default function Dashboard() {
       <div className="flex flex-col md:gap-6 gap-3 md:m-8 m-5">
         <div className="flex justify-between text-darkText font-medium text-xl">
           <div>Overview</div>
-          <div className="flex gap-2 text-lightText text-base font-normal bg-white border border-borderGray rounded box-border cursor-pointer">
-            <p className="pl-3 py-1 ">Last month</p>
+          <button className="flex gap-2 text-lightText text-base font-normal bg-white border border-borderGray rounded box-border cursor-pointer">
+            <span className="pl-3 py-1 ">Last month</span>
             <svg
               width="12"
               height="8"
@@ -69,7 +69,7 @@ export default function Dashboard() {
                 fill="#4D4D4D"
               />
             </svg>
-          </div>
+          </button>
         </div>
         <div className="flex justify-between gap-5">
           <div className="flex flex-col justify-between md:gap-4 p-5 md:w-1/2 w-auto h-[118px] bg-white card-shadow rounded-lg">
@@ -127,8 +127,8 @@ export default function Dashboard() {
               </div>
             </form>
             <div className="flex md:gap-3 gap-2">
-              <div className="flex gap-2 py-[6px] ml-2 px-3 text-lightText text-base font-normal bg-white border border-borderGray rounded box-border">
-                <p className="text-base font-normal">Sort</p>
+              <button className="flex content-center gap-2 py-[6px] ml-2 px-3 text-lightText text-base font-normal bg-white border border-borderGray rounded box-border">
+                <span className="text-base font-normal">Sort</span>
                 <svg
                   width="14"
                   height="12"
@@ -162,8 +162,8 @@ export default function Dashboard() {
                     fill="#4D4D4D"
                   />
                 </svg>
-              </div>
-              <div className=" p-2 bg-white border border-borderGray rounded box-border">
+              </button>
+              <button className=" p-2 bg-white border border-borderGray rounded box-border">
                 <svg
                   width="18"
                   height="18"
@@ -177,7 +177,7 @@ export default function Dashboard() {
                     fill="#4D4D4D"
                   />
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
           {/* Table Starts here */}
