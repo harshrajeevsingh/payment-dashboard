@@ -51,7 +51,7 @@ export default function Dashboard() {
     <>
       <DashSearch />
       {/* Overview */}
-      <div className="flex flex-col gap-6 m-8">
+      <div className="flex flex-col md:gap-6 gap-3 md:m-8 m-5">
         <div className="flex justify-between text-darkText font-medium text-xl">
           <div>Overview</div>
           <div className="flex gap-2 text-lightText text-base font-normal bg-white border border-borderGray rounded box-border cursor-pointer">
@@ -72,13 +72,13 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="flex justify-between gap-5">
-          <div className="flex flex-col justify-between gap-4 p-5 w-1/2 h-[118px] bg-white card-shadow rounded-lg">
+          <div className="flex flex-col justify-between md:gap-4 p-5 md:w-1/2 w-auto h-[118px] bg-white card-shadow rounded-lg">
             <p className="text-lightText font-normal text-base">
               Online Orders
             </p>
             <p className="text-darkText  text-[2rem] font-medium">231</p>
           </div>
-          <div className="flex flex-col justify-between gap-4 p-5 w-1/2 h-[118px] bg-white card-shadow rounded-lg">
+          <div className="flex flex-col justify-between md:gap-4 p-5 md:w-1/2 w-auto h-[118px] bg-white card-shadow rounded-lg">
             <p className="text-lightText font-normal text-base">
               Amounts received
             </p>
@@ -89,7 +89,8 @@ export default function Dashboard() {
         </div>
       </div>
       {/* Transactions Table */}
-      <div className="flex flex-col gap-5 mx-8 mb-8 ">
+      {/* <div className="flex flex-col gap-5 mx-8 mb-8 "> */}
+      <div className="flex flex-col gap-5 md:mx-8 mx-7 md:mb-8 mb-6">
         <div className="text-darkText text-xl font-medium">
           Transactions | This Month{" "}
         </div>
@@ -120,13 +121,13 @@ export default function Dashboard() {
                 </div>
                 <input
                   type="text"
-                  className="w-[248px] h-10 rounded-md placeholder:text-searchText text-darkText ps-10 text-sm font-normal border border-borderGray"
+                  className="md:w-[248px] w-auto h-10 rounded-md placeholder:text-searchText text-darkText ps-10 text-sm font-normal border border-borderGray"
                   placeholder="Search by order ID..."
                 />
               </div>
             </form>
-            <div className="flex gap-3">
-              <div className="flex gap-2 py-[6px] px-3 text-lightText text-base font-normal bg-white border border-borderGray rounded box-border">
+            <div className="flex md:gap-3 gap-2">
+              <div className="flex gap-2 py-[6px] ml-2 px-3 text-lightText text-base font-normal bg-white border border-borderGray rounded box-border">
                 <p className="text-base font-normal">Sort</p>
                 <svg
                   width="14"
@@ -187,16 +188,18 @@ export default function Dashboard() {
                   <th scope="col" className="px-3 py-[10px] rounded-s">
                     Order ID
                   </th>
-                  <th scope="col">Order date</th>
-                  <th scope="col" className="pr-5 text-right">
+                  <th scope="col" className="text-center">
+                    Order date
+                  </th>
+                  <th scope="col" className="pr-5 md:text-right text-end">
                     Order Amount
                   </th>
                   <th
                     scope="col"
                     className="w-1/4 text-right px-3 py-[10px]  rounded-e"
                   >
-                    <div className="flex justify-end gap-1 ">
-                      Transaction Fees
+                    <div className="flex justify-end md:gap-1 text-center">
+                      <span>Transaction Fees</span>
                       <svg
                         width="14"
                         height="14"
@@ -235,7 +238,7 @@ export default function Dashboard() {
                   </th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="border-hidden">
                 {currentData.map((_, index) => (
                   <tr
                     key={index}
@@ -244,11 +247,13 @@ export default function Dashboard() {
                     <td className="px-3 py-[14px] text-blueText font-medium text-sm">
                       #281209
                     </td>
-                    <td className="text-darkText text-sm">7 July 2023</td>
-                    <td className="px-6 py-4 text-darkText text-right">
+                    <td className="py-[14px] text-darkText text-sm text-center ">
+                      7 July 2023
+                    </td>
+                    <td className="px-6 py-[14px] text-darkText text-right">
                       ₹1,278.23
                     </td>
-                    <td className="w-1/5 px-3 py-[14px] text-darkText text-right">
+                    <td className="w-1/5 px-3 py-[14px] text-darkText md:text-right text-center">
                       ₹22
                     </td>
                   </tr>
@@ -256,7 +261,7 @@ export default function Dashboard() {
               </tbody>
             </table>
             {/* Pagination */}
-            <div className="flex justify-center items-center gap-6 my-6">
+            <div className="flex justify-center items-center md:w-auto w-screen md:gap-6 gap-2 my-6">
               {/* previous btn */}
               <button
                 onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}

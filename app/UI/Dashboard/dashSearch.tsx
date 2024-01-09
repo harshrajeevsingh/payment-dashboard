@@ -1,7 +1,9 @@
 export default function DashSearch() {
   return (
-    <div className="flex justify-between items-center h-16 px-8 bg-white border border-b-borderGray">
-      <div className="flex gap-4">
+    <div className="flex justify-end md:justify-between items-center md:gap-0 gap-4 md:h-16 h-20 md:px-8 px-5  bg-white border border-b-borderGray">
+      <div className="md:flex hidden gap-4">
+        {" "}
+        {/* hidden in mobile */}
         <p className="text-darkText text-[0.9375rem] font-normal">Payments</p>
         <div className="flex items-center gap-[6px]">
           <svg
@@ -41,7 +43,7 @@ export default function DashSearch() {
         </div>
       </div>
       <form>
-        <div className="relative">
+        <div className="relative ">
           <div className="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none ">
             <svg
               width="16"
@@ -65,12 +67,12 @@ export default function DashSearch() {
           </div>
           <input
             type="text"
-            className="bg-darkGray w-[400px] h-10 rounded-md placeholder:text-searchText text-darkText ps-10"
-            placeholder="Search features, tutorials, etc."
+            className="bg-darkGray w-auto md:w-[400px] h-10 rounded-md placeholder:text-searchText placeholder:truncate text-darkText ps-10"
+            placeholder="Search features, tutorials, etc"
           />
         </div>
       </form>
-      <div className="flex gap-4">
+      <div className="flex md:gap-4 gap-2 ">
         <svg
           width="40"
           height="40"
