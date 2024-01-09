@@ -25,3 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.card-shadow {
+  /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.05); */
+  box-shadow: 0px 2px 6px 0px rgba(26, 24, 30, 0.04);
+}
